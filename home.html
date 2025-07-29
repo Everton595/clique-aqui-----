@@ -2,42 +2,39 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Te Amo, Meu Amor 💖</title>
+  <title>O que é JavaScript? 💻</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', cursive, sans-serif;
-      background: linear-gradient(to bottom right, #ffb6c1, #ffe4e1);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #fff;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     h1 {
-      margin-top: 60px;
+      margin-top: 40px;
       font-size: 3em;
-      animation: fadeInDown 2s ease;
-      color: #fff0f5;
+      animation: fadeInDown 1.5s ease;
+      color: #00ffff;
     }
 
-    .textao {
+    .content {
       max-width: 800px;
       margin: 30px auto;
       padding: 20px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(255, 20, 147, 0.3);
-      font-size: 1.3em;
-      line-height: 1.7;
-      animation: fadeInUp 5s ease;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      animation: fadeInUp 2s ease;
     }
-    
 
     .btn {
-      margin-top: 30px;
-      background: white;
-      color: #ff1493;
+      margin-top: 20px;
+      background: #00ffff;
+      color: #000;
       padding: 15px 30px;
       border: none;
       border-radius: 30px;
@@ -47,84 +44,64 @@
     }
 
     .btn:hover {
-      background: #ff1493;
-      color: white;
+      background: #00ccff;
       transform: scale(1.05);
     }
 
-    .heart {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: red;
-      transform: rotate(45deg);
-      animation: float 6s infinite;
-    }
-
-    .heart::before,
-    .heart::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: red;
-      border-radius: 50%;
-    }
-
-    .heart::before {
-      top: -10px;
-      left: 0;
-    }
-
-    .heart::after {
-      top: 0;
-      left: -10px;
+    .code-box {
+      background: #111;
+      text-align: left;
+      padding: 15px;
+      border-radius: 10px;
+      color: #00ff99;
+      font-family: monospace;
+      margin-top: 20px;
+      white-space: pre-wrap;
     }
 
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-50px); }
+      from { opacity: 0; transform: translateY(-40px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(50px); }
+      from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes float {
-      0% { top: 100%; opacity: 0; }
-      50% { opacity: 1; }
-      100% { top: -10%; opacity: 0; }
     }
 
     footer {
       margin-top: 40px;
       font-size: 0.9em;
-      color: #fff;
+      color: #ccc;
     }
   </style>
 </head>
-<body> 
-  <marquee behavior="alternate" direction="left" scrollamount="20"><h1>Dayane, Esse Amor é Só Nosso 💘</h1></marquee>
+<body>
+  <h1>Aprenda JavaScript! 💡</h1>
 
-  <div class="textao">
-    Meu amor, <br><br>
-    Não existem palavras suficientes neste mundo para descrever o quanto você é especial pra mim. Cada momento ao seu lado é mágico, cada sorriso seu ilumina meu dia, e cada abraço seu me faz sentir no lugar mais seguro do mundo. <br><br>
-    Você é minha melhor escolha, meu presente mais bonito, minha paz em meio ao caos. Não importa o que aconteça, estarei sempre aqui, te amando, cuidando de você e torcendo pela sua felicidade. <br><br>
-    Obrigado por existir, por me amar e por me permitir te amar também. Você é o meu mundo, minha inspiração, meu verdadeiro amor. <br><br>
-    Te amo mais do que palavras podem dizer, e esse site é só um pedacinho do tanto que meu coração sente por você. 💖
+  <div class="content">
+    <p><strong>JavaScript</strong> é uma linguagem de programação que permite criar interatividade em páginas da web. Ele pode responder a cliques, alterar elementos na tela e até controlar animações e jogos!</p>
+
+    <p>Veja abaixo um exemplo de código JavaScript:</p>
+
+    <div class="code-box">
+      <code>
+        function dizerOla() {
+          alert("Olá, mundo!");
+        }
+      </code>
+    </div>
+
+    <p>Clique no botão abaixo para ver o JavaScript funcionando:</p>
+    <button class="btn" onclick="dizerOla()">Clique aqui!</button>
   </div>
-  <!-- Corações animados -->
+
+  <footer>Site criado com HTML, CSS e JavaScript ✨</footer>
+
   <script>
-    for(let i = 0; i < 35; i++) {
-      let heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = (Math.random() * 4 + 3) + "s";
-      document.body.appendChild(heart);
+    function dizerOla() {
+      alert("🎉 Você acabou de executar JavaScript! Bem-vindo ao mundo da programação!");
     }
   </script>
-
-  <footer>Feito com todo o carinho do mundo 💖</footer>
 </body>
 </html>
